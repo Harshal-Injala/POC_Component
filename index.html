@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form Components - POC Components</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="javascript:void(0)">POC Components</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Form Components</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="table.html">Table Components</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="other.html">Other Components</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Link</a></li>
+                              <li><a class="dropdown-item" href="#">Another link</a></li>
+                              <li><a class="dropdown-item" href="#">A third link</a></li>
+                            </ul>
+                          </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container mt-5">
+        <p class="alert alert-dark text-center"><b>Note:</b> To make any component please follow its prerequisite.</p>
+       <h2 class="text-center fw-bold">Form Components</h2>
+       <h4 class="mt-3">Prerequisite:</h4>
+       <div class="code-editor">
+            <h6>HTML</h6>
+            <pre>
+
+                &lt;div class="container mt-5"&gt;
+                    &lt;h2 class="form-header"&gt;Form Header Goes Here&lt;/h2&gt;
+                    &lt;form class="form-main"&gt;
+                        &lt;table&gt;
+                            &lt;!-- Component Code Goes Here. --&gt;
+                        &lt;/table&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            </pre>
+       </div>
+       <div class="code-editor">
+        <h6>CSS</h6>
+        <pre>
+
+            .form-header{
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: bold;
+            }
+            .form-main{
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            .form-main table{
+                width: 60%;
+                margin: 0px auto;
+            }
+            .form-main table tr td{
+                padding: 10px;
+            }
+            .form-main table tr td input,.form-main table tr td select{
+                width: 100%;
+                height: 50px;
+            }
+        </pre>            
+   </div>
+       <h4 class="mt-3">1. Textbox in single column.</h4>
+       <form class="form-main">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </td>
+            </tr>
+        </table>
+       </form>
+       <div class="code-editor">
+            <h6>HTML</h6>
+            <pre>
+
+                &lt;tr&gt;
+                    &lt;td colspan="2"&gt;
+                        &lt;label for="name" class="form-label"&gt;Name:&lt;/label&gt;
+                        &lt;input type="text" class="form-control" id="name" name="name"&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            </pre>
+        </div>
+        <h4 class="mt-3">2. Textbox in two column.</h4>
+        <form class="form-main">
+            <table>
+                <tr>
+                    <td>
+                        <label for="fname" class="form-label">First Name:</label>
+                        <input type="text" class="form-control" id="fname" name="fname">
+                    </td>
+                    <td>
+                        <label for="lname" class="form-label">Last Name:</label>
+                        <input type="text" class="form-control" id="lname" name="lname">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div class="code-editor">
+            <h6>HTML</h6>
+            <pre>
+
+                &lt;tr&gt;
+                    &lt;td&gt;
+                        &lt;label for="fname" class="form-label"&gt;First Name:&lt;/label&gt;
+                        &lt;input type="text" class="form-control" id="fname" name="fname"&gt;
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                        &lt;label for="lname" class="form-label"&gt;Last Name:&lt;/label&gt;
+                        &lt;input type="text" class="form-control" id="lname" name="lname"&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            </pre>                
+        </div>
+        <h4 class="mt-3">3. Select Box in single column.</h4>
+       <form class="form-main">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <label for="name" class="form-label">Name:</label>
+                    <select class="form-select">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+       </form>
+       <div class="code-editor">
+            <h6>HTML</h6>
+            <pre>
+                
+                &lt;tr&gt;
+                    &lt;td colspan="2"&gt;
+                        &lt;label for="name" class="form-label"&gt;Name:&lt;/label&gt;
+                        &lt;select class="form-select"&gt;
+                            &lt;option&gt;Option 1&lt;/option&gt;
+                            &lt;option&gt;Option 2&lt;/option&gt;
+                            &lt;option&gt;Option 3&lt;/option&gt;
+                            &lt;option&gt;Option 4&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            </pre>
+                
+        </div>
+        <h4 class="mt-3">4. Select Box in two column.</h4>
+        <form class="form-main">
+            <table>
+                <tr>
+                    <td>
+                        <label for="fname" class="form-label">First Name:</label>
+                        <select class="form-select">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="lname" class="form-label">Last Name:</label>
+                        <select class="form-select">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div class="code-editor">
+            <h6>HTML</h6>
+            <pre>
+
+                &lt;tr&gt;
+                    &lt;td&gt;
+                        &lt;label for="fname" class="form-label"&gt;First Name:&lt;/label&gt;
+                        &lt;select class="form-select"&gt;
+                            &lt;option&gt;Option 1&lt;/option&gt;
+                            &lt;option&gt;Option 2&lt;/option&gt;
+                            &lt;option&gt;Option 3&lt;/option&gt;
+                            &lt;option&gt;Option 4&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                        &lt;label for="lname" class="form-label"&gt;Last Name:&lt;/label&gt;
+                        &lt;select class="form-select"&gt;
+                            &lt;option&gt;Option 1&lt;/option&gt;
+                            &lt;option&gt;Option 2&lt;/option&gt;
+                            &lt;option&gt;Option 3&lt;/option&gt;
+                            &lt;option&gt;Option 4&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            </pre>                              
+        </div>
+        <p class="alert alert-dark text-center"><b>Note:</b> "colspan" is equal to no. of columns in your table.</p>
+        <h4 class="mt-3">5. Button in single column.</h4>
+       <form class="form-main">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <a href="#" class="btn btn-primary w-100">Button</a>
+                </td>
+            </tr>
+        </table>
+       </form>
+       <div class="code-editor">
+        <h6>HTML</h6>
+        <pre>
+
+            &lt;tr&gt;
+                &lt;td colspan="2"&gt;
+                    &lt;a href="#" class="btn btn-primary w-100"&gt;Button&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        </pre>                         
+    </div>
+    <h4 class="mt-3">6. Two Buttons in single column.</h4>
+       <form class="form-main">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary" style="width: 48%;">Button 1</a>
+                        <a href="#" class="btn btn-primary" style="width: 48%;">Button 2</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+       </form>
+       <div class="code-editor">
+        <h6>HTML</h6>
+        <pre>
+
+            &lt;tr&gt;
+                &lt;td colspan="2"&gt;
+                    &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                        &lt;a href="#" class="btn btn-primary" style="width: 48%;"&gt;Button 1&lt;/a&gt;
+                        &lt;a href="#" class="btn btn-primary" style="width: 48%;"&gt;Button 2&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        </pre>                       
+    </div>
+    <h4 class="mt-3">7. Button in single column at left corner.</h4>
+       <form class="form-main">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <a href="#" class="btn btn-primary">Button</a>
+                </td>
+            </tr>
+        </table>
+       </form>
+       <div class="code-editor">
+        <h6>HTML</h6>
+        <pre>
+
+            &lt;tr&gt;
+                &lt;td colspan="2"&gt;
+                    &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        </pre>                         
+    </div>
+    <h4 class="mt-3">8. Button in single column at right corner.</h4>
+       <form class="form-main">
+        <table>
+            <tr>
+                <td colspan="2" class="text-end">
+                    <a href="#" class="btn btn-primary">Button</a>
+                </td>
+            </tr>
+        </table>
+       </form>
+       <div class="code-editor">
+        <h6>HTML</h6>
+        <pre>
+
+            &lt;tr&gt;
+                &lt;td colspan="2"  class="text-end"&gt;
+                    &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        </pre>                         
+    </div>
+    <h4 class="mt-3">9. Buttons in single column with space between.</h4>
+       <form class="form-main">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="btn btn-primary">Button</a>
+                        <a href="#" class="btn btn-primary">Button</a>
+                    </div>
+                    
+                </td>
+            </tr>
+        </table>
+       </form>
+       <div class="code-editor">
+        <h6>HTML</h6>
+        <pre>
+
+            &lt;tr&gt;
+                &lt;td colspan="2"&gt;
+                    &lt;div class="d-flex justify-content-between align-items-center"&gt;
+                        &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+                        &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+             &lt;/tr&gt;
+        </pre>                         
+    </div>
+    <h4 class="mt-3">10. Buttons in single column with space between but center aligned.</h4>
+       <form class="form-main">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <div class="d-flex justify-content-center align-items-center gap-3">
+                        <a href="#" class="btn btn-primary">Button</a>
+                        <a href="#" class="btn btn-primary">Button</a>
+                    </div>
+                    
+                </td>
+            </tr>
+        </table>
+       </form>
+       <div class="code-editor">
+        <h6>HTML</h6>
+        <pre>
+
+            &lt;tr&gt;
+                &lt;td colspan="2"&gt;
+                    &lt;div class="d-flex justify-content-center align-items-center gap-3"&gt;
+                        &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+                        &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+             &lt;/tr&gt;
+        </pre>                         
+    </div>
+    <h4 class="mt-3">11. Checkboxes in single column.</h4>
+       <form class="form-main">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <label for="hobbies" class="form-label">Hobbies:</label>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="">
+                            <label class="form-check-label">Option 1</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="">
+                            <label class="form-check-label">Option 2</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="">
+                            <label class="form-check-label">Option 3</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="">
+                            <label class="form-check-label">Option 4</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="">
+                            <label class="form-check-label">Option 5</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="">
+                            <label class="form-check-label">Option 6</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="check1" name="option1" value="">
+                            <label class="form-check-label">Option 7</label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+       </form>
+       <div class="code-editor">
+        <h6>HTML</h6>
+        <pre>
+
+            &lt;tr&gt;
+                &lt;td colspan="2"&gt;
+                    &lt;label for="hobbies" class="form-label"&gt;Hobbies:&lt;/label&gt;
+                    &lt;div class="d-flex flex-wrap gap-3"&gt;
+                        &lt;div class="form-check"&gt;
+                            &lt;input class="form-check-input" type="checkbox" id="check1" name="option1" value=""&gt;
+                            &lt;label class="form-check-label"&gt;Option 1&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-check"&gt;
+                            &lt;input class="form-check-input" type="checkbox" id="check1" name="option1" value=""&gt;
+                            &lt;label class="form-check-label"&gt;Option 2&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-check"&gt;
+                            &lt;input class="form-check-input" type="checkbox" id="check1" name="option1" value=""&gt;
+                            &lt;label class="form-check-label"&gt;Option 3&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-check"&gt;
+                            &lt;input class="form-check-input" type="checkbox" id="check1" name="option1" value=""&gt;
+                            &lt;label class="form-check-label"&gt;Option 4&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-check"&gt;
+                            &lt;input class="form-check-input" type="checkbox" id="check1" name="option1" value=""&gt;
+                            &lt;label class="form-check-label"&gt;Option 5&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-check"&gt;
+                            &lt;input class="form-check-input" type="checkbox" id="check1" name="option1" value=""&gt;
+                            &lt;label class="form-check-label"&gt;Option 6&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-check"&gt;
+                            &lt;input class="form-check-input" type="checkbox" id="check1" name="option1" value=""&gt;
+                            &lt;label class="form-check-label"&gt;Option 7&lt;/label&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        </pre>                          
+    </div>
+    <h4 class="mt-3">12. Radio Buttons in single column.</h4>
+       <form class="form-main">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <label for="subjects" class="form-label">Subjects:</label>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="radio1" name="option" value="">
+                            <label class="form-check-label" for="radio1">Option 1</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="radio2" name="option" value="">
+                            <label class="form-check-label" for="radio2">Option 2</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="radio3" name="option" value="">
+                            <label class="form-check-label" for="radio3">Option 3</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="radio4" name="option" value="">
+                            <label class="form-check-label" for="radio4">Option 4</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="radio5" name="option" value="">
+                            <label class="form-check-label" for="radio5">Option 5</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="radio6" name="option" value="">
+                            <label class="form-check-label" for="radio6">Option 6</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="radio7" name="option" value="">
+                            <label class="form-check-label" for="radio7">Option 7</label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+       </form>
+       <div class="code-editor">
+        <h6>HTML</h6>
+        <pre>
+
+            &lt;tr&gt;
+                &lt;td colspan="2"&gt;
+                    &lt;label for="hobbies" class="form-label"&gt;Hobbies:&lt;/label&gt;
+                    &lt;div class="d-flex flex-wrap gap-3"&gt;
+                        &lt;div class="form-check"&gt;
+                            &lt;input class="form-check-input" type="radio" id="radio1" name="option" value=""&gt;
+                            &lt;label class="form-check-label" for="radio1"&gt;Option 1&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-check"&gt;
+                            &lt;input class="form-check-input" type="radio" id="radio2" name="option" value=""&gt;
+                            &lt;label class="form-check-label" for="radio2"&gt;Option 2&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-check"&gt;
+                            &lt;input class="form-check-input" type="radio" id="radio3" name="option" value=""&gt;
+                            &lt;label class="form-check-label" for="radio3"&gt;Option 3&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-check"&gt;
+                            &lt;input class="form-check-input" type="radio" id="radio4" name="option" value=""&gt;
+                            &lt;label class="form-check-label" for="radio4"&gt;Option 4&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-check"&gt;
+                            &lt;input class="form-check-input" type="radio" id="radio5" name="option" value=""&gt;
+                            &lt;label class="form-check-label" for="radio5"&gt;Option 5&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-check"&gt;
+                            &lt;input class="form-check-input" type="radio" id="radio6" name="option" value=""&gt;
+                            &lt;label class="form-check-label" for="radio6"&gt;Option 6&lt;/label&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-check"&gt;
+                            &lt;input class="form-check-input" type="radio" id="radio7" name="option" value=""&gt;
+                            &lt;label class="form-check-label" for="radio7"&gt;Option 7&lt;/label&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        </pre>                          
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

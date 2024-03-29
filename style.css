@@ -1,0 +1,39 @@
+.form-header{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+.form-main{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.form-main table{
+    width: 60%;
+    margin: 0px auto;
+}
+.form-main table tr td{
+    padding: 10px;
+}
+.form-main table tr td .form-control,.form-main table tr td .form-select{
+    width: 100%;
+    height: 50px;
+}
+.code-editor {
+    background-color: #E7E9EB;
+    color: #000;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 15px;
+}
+
+.code-editor h6 {
+    color: #000;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.code-editor pre {
+    margin: 15px;
+    background-color: #fff;
+    white-space: pre-wrap;
+}
